@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SleepGame.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SleepGameAPI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D43DEDE81BC594CF009662DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D43DEDFC1BC594CF009662DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D43DEE071BC594CF009662DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4B476161BCFB12D005A9BD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4B4761F1BCFB12E005A9BD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
