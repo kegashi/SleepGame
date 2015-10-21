@@ -26,6 +26,8 @@
 		D4B476741BD064C1005A9BD0 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476731BD064C1005A9BD0 /* RankingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4B476761BD064FC005A9BD0 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476751BD064FC005A9BD0 /* AchievementViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4B476781BD06536005A9BD0 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476771BD06536005A9BD0 /* ConfigViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D4B4767E1BD56806005A9BD0 /* MyPageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D4B476811BD579FD005A9BD0 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476801BD579FD005A9BD0 /* json.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		D4B476731BD064C1005A9BD0 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		D4B476751BD064FC005A9BD0 /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
 		D4B476771BD06536005A9BD0 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageDetailViewController.swift; sourceTree = "<group>"; };
+		D4B476801BD579FD005A9BD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		D43DEDEB1BC594CF009662DD /* SleepGame */ = {
 			isa = PBXGroup;
 			children = (
+				D4B4767F1BD579EA005A9BD0 /* Supporting Files */,
 				D43DEE221BC63318009662DD /* ViewController */,
 				D43DEE1A1BC595E0009662DD /* SleepGameAPI */,
 				D43DEDEC1BC594CF009662DD /* AppDelegate.swift */,
@@ -210,8 +215,17 @@
 				D4B476731BD064C1005A9BD0 /* RankingViewController.swift */,
 				D4B476751BD064FC005A9BD0 /* AchievementViewController.swift */,
 				D4B476771BD06536005A9BD0 /* ConfigViewController.swift */,
+				D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D4B4767F1BD579EA005A9BD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4B476801BD579FD005A9BD0 /* json.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +400,8 @@
 				D4B476761BD064FC005A9BD0 /* AchievementViewController.swift in Sources */,
 				D4B476681BD03F3C005A9BD0 /* StatusController.swift in Sources */,
 				D43DEDEF1BC594CF009662DD /* ViewController.swift in Sources */,
+				D4B476811BD579FD005A9BD0 /* json.swift in Sources */,
+				D4B4767E1BD56806005A9BD0 /* MyPageDetailViewController.swift in Sources */,
 				D43DEDED1BC594CF009662DD /* AppDelegate.swift in Sources */,
 				D43DEE241BC6333C009662DD /* MainTabViewController.swift in Sources */,
 				D4B476741BD064C1005A9BD0 /* RankingViewController.swift in Sources */,

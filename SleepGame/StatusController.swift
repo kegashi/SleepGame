@@ -17,13 +17,17 @@ class StatusController: UIViewController {
     @IBOutlet weak var UserDays: UILabel!
     @IBOutlet weak var UserExp: UILabel!
     
+    var user = UserAPI.User()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        let config = NSUserDefaults.standardUserDefaults()
+        let result : AnyObject! = config.objectForKey("UserID")
+        user = UserAPI().getData(result as! String)//"71241781")
         //ユーザの画像の読み込み
-        let img_url = SleepGameAPI.img + SleepGameAPI.userAPI().getUserPicUrl()
-        let url = NSURL(string: img_url);
+        let img_url = SleepGameAPI.img + user.picurl!
+        let url = NSURL(string: img_url)
         let imgData: NSData
         do {
             imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
@@ -33,11 +37,10 @@ class StatusController: UIViewController {
             print("Error: can't create image.")
 
         }
-        UserName.text = SleepGameAPI.userAPI().getUserName()
-        
+        UserName.text = user.username
         UserBar.progress = 0.9
-        UserExp.text = "次:" + String(SleepGameAPI.userAPI().getNext()) + "pt"
-        UserRank.text = "ランク" + String(SleepGameAPI.userAPI().getRank())
+        UserExp.text = "次:" + String(UserAPI().getNext(user.sumpoint!)) + "pt"
+        UserRank.text = "ランク" + String(UserAPI().getRank(user.sumpoint!))
         UserDays.text = "10" + "日目"
         
     }

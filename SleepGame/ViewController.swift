@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let config = NSUserDefaults.standardUserDefaults()
-        config.setObject("zukky",forKey:"UserID")
-        config.setObject("kazuki",forKey:"UserPASS")
+        config.setObject("71241784",forKey:"UserID")
+        config.setObject("00000000",forKey:"UserPASS")
         config.synchronize()
         // 設定値の取得
         let result : AnyObject! = config.objectForKey("UserID")

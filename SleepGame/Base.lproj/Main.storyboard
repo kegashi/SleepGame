@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-111.5" y="441.5"/>
         </scene>
-        <!--View Controller-->
+        <!--My Page Detail View Controller-->
         <scene sceneID="LLi-Zd-kLf">
             <objects>
-                <viewController id="uF2-z5-enb" sceneMemberID="viewController">
+                <viewController id="uF2-z5-enb" customClass="MyPageDetailViewController" customModule="SleepGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H2a-tC-DUB"/>
                         <viewControllerLayoutGuide type="bottom" id="tyg-iK-pNl"/>
@@ -159,10 +159,19 @@
                                     <segue destination="Rh9-XO-8iK" kind="unwind" unwindAction="unwindToMyPage:" id="WEZ-wj-gJm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="checklabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd5-u2-90T">
+                                <rect key="frame" x="20" y="187" width="316" height="231"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="checklabel" destination="Hd5-u2-90T" id="rN2-f0-wDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofj-JZ-lwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Rh9-XO-8iK" userLabel="Exit" sceneMemberID="exit"/>
