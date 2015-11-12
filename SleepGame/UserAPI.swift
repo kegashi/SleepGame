@@ -11,13 +11,16 @@ import Foundation
 public class UserAPI {
     
     public struct User {
-        public var id: String?
-        public var username: String?
-        public var password: String?
-        public var idealduration: String?
-        public var startdate: String?
-        public var sumpoint: Int?
-        public var picurl: String?
+        public var id: String? //ID
+        public var address: String? //メールアドレス
+        public var username: String? //ユーザ名
+        public var password: String? //パスワード
+        public var idealduration: Int? //理想睡眠時間
+        public var startdate: String? //始めた日
+        public var sumpoint: Int? //合計得点
+        public var picurl: String? //画像URL
+        public var rank: Int? //現在のランク
+        public var next: Int? //次の経験値まで
     }
     
     public func getData(id: String) -> User{
@@ -25,12 +28,15 @@ public class UserAPI {
         let url = SleepGameAPI.api + "getmydata.php?id=" + id + "&all=false"
         let json = JSON(url: url)
         user.id = json["0"]["0"]["id"].toString()
+        user.address = json["0"]["0"]["address"].toString()
         user.username = json["0"]["0"]["username"].toString()
         user.password = json["0"]["0"]["password"].toString()
-        user.idealduration = json["0"]["0"]["idealdurartion"].toString()
+        user.idealduration = Int(json["0"]["0"]["idealdurartion"].toString())
         user.startdate = json["0"]["0"]["startdate"].toString()
         user.sumpoint = Int(json["0"]["0"]["sumpoint"].toString())
         user.picurl = json["0"]["0"]["imgurl"].toString()
+        user.rank = user.sumpoint! / 80 + 1
+        user.next = 80 - user.sumpoint! % 80
         return user
     }
     
@@ -55,10 +61,7 @@ public class UserAPI {
     
     }
     
-    //ユーザの写真のURLを取得する
-    public func getUserPicUrl() -> String {
-        return "zukky.jpg"
-    }
+    //------------------古いランクAPI-------------//
     //ユーザの現在のランクを取得する
     public func getRank(sumpoint: Int) -> Int {
         //let sumpoint: Int = 10000

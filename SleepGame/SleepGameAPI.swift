@@ -23,4 +23,8 @@ public class SleepGameAPI {
         return sleep
     }
     
+    public class func mysleepDataAPI() -> MySleepDataAPI {
+        let sleepdata: MySleepDataAPI = MySleepDataAPI()
+        return sleepdata
+    }
 }
