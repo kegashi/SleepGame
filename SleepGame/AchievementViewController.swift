@@ -11,37 +11,44 @@ import UIKit
 class AchievementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
     
+    var arrayBed: [String] = []
+    var arrayDay: [Int] = []
+    var arrayDuration: [Int] = []
+    var arrayPoint: [Int] = []
     
-    var mysleepdatas: [MySleepDataAPI.MySleepData] = []
-    var arrayID = ["3J8SRD","3J8SRD","3J8SRD","3J8SRD","3J8SRD","3J8SRD","3J8SRD"]
-    var arrayBed = ["20151103012300","20151104021900","20151105023200","20151106015400","20151107012400","20151108023600","20151109053200"]
-    var arrayWake = ["201511030073200","201511040083600","201511050095400","201511060073100","201511070082600","201511080073900","201511090091200"]
-    var arrayPoint = ["89","71","89","86","75","81","56"]
+    //var config = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let url = SleepGameAPI.api + "sample.json"
-        //let json = JSON(url: url)
-        //print("jsonlength")
-        //print(json["0"].length)
-        //let c = json["0"].length
+        let config = NSUserDefaults.standardUserDefaults()
+        let result : AnyObject! = config.objectForKey("UserID")
+        let str: String = (result as? String)!
+        print(str)
+        let url = SleepGameAPI.api + "getmydata.php?id=" + (result as? String)! + "&all=data"
+        print("url")
+        print(url)
+        let json = JSON(url: url)
+        print("json")
+        print(json)
+        print("jsonlength")
+        print(json.length)
+        let c = json.length
         //let j = 1
         //print("json01id")
-        //print(json["0"][String(j)]["bedtime"])
-        /*
-        for i in 0...c-1{
-            var mysleepdata : MySleepDataAPI.MySleepData
-            mysleepdata.id = String(json["0"][String(i)]["id"])
-            mysleepdata.bedtime = String(json["0"][String(i)]["bedtime"])
-            mysleepdata.wakeuptime = String(json["0"][String(i)]["wakeuptime"])
-            mysleepdata.point = Int(String(json["0"][String(i)]["point"]))
+        //print(json["0"]["0"]["username"])
+        
+        for(var i = 0; i < c; i++){
+            arrayBed.append(String(json[String(i)]["0"]["bedtime"]))
+            arrayDay.append(Int(String(json[String(i)]["0"]["day"]))!)
+            arrayDuration.append(Int(String(json[String(i)]["0"]["duration"]))!)
+            arrayPoint.append(Int(String(json[String(i)]["0"]["point"]))!)
         }
-        */
+        
     }
     
     //Table Viewのセルの数を指定
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayID.count
+        return arrayDuration.count
     }
     
     //各セルの要素を設定する
@@ -51,12 +58,16 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = table.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         let bedtime = arrayBed[indexPath.row]
-        let wakeuptime = arrayWake[indexPath.row]
-        //let duration = Int(wakeuptime)! - Int(bedtime)!
-        let score = arrayPoint[indexPath.row]
-        
+        print("bedtime=\(bedtime)")
+        let duration = arrayDuration[indexPath.row]
+        print("duration= \(duration)")
+        //let waketime = Int(wakeuptime)! + Int(duration)!
+        let day = arrayDay[indexPath.row]
+        print("day=\(day)")
+        let point = arrayPoint[indexPath.row]
+        print("point=\(point)")
         let label0 = table.viewWithTag(1) as! UILabel
-        label0.text = "11月2日(月)"
+        label0.text = "\(bedtime)"//"11月2日(月)"
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = table.viewWithTag(2) as! UILabel
@@ -71,7 +82,7 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         label3.text = "8:28"//String(duration)
         
         let label4 = table.viewWithTag(5) as! UILabel
-        label4.text = score + "点"
+        label4.text = "\(point)" + "点"
         
         return cell
     }

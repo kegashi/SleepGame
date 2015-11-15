@@ -41,7 +41,7 @@ class StatusController: UIViewController {
         UserBar.progress = 1 - (Float(user.next!) / 30)
         UserExp.text = "次:" + String(user.next!) + "pt"
         UserRank.text = "レベル" + String(user.rank!)
-        UserDays.text = "17" + "日目"
+        UserDays.text = "20" + "日目"
         
     }
     

@@ -24,6 +24,7 @@
 		D49010F91BD975A0008A1F29 /* tri2.png in Resources */ = {isa = PBXBuildFile; fileRef = D49010F71BD975A0008A1F29 /* tri2.png */; };
 		D49010FC1BD9891C008A1F29 /* CTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49010FB1BD9891C008A1F29 /* CTModel.swift */; };
 		D49010FE1BD98A5B008A1F29 /* CTViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49010FD1BD98A5B008A1F29 /* CTViewCell.swift */; };
+		D4A4F5801BF45DC300F70EE2 /* OtherSleepDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4F57F1BF45DC300F70EE2 /* OtherSleepDataAPI.swift */; };
 		D4B476681BD03F3C005A9BD0 /* StatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476671BD03F3C005A9BD0 /* StatusController.swift */; };
 		D4B4766C1BD06152005A9BD0 /* zukky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B4766B1BD06152005A9BD0 /* zukky.jpg */; };
 		D4B4766F1BD06164005A9BD0 /* suya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4B4766D1BD06164005A9BD0 /* suya.jpg */; };
@@ -97,6 +98,7 @@
 		D49010F71BD975A0008A1F29 /* tri2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tri2.png; path = img/tri2.png; sourceTree = "<group>"; };
 		D49010FB1BD9891C008A1F29 /* CTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTModel.swift; sourceTree = "<group>"; };
 		D49010FD1BD98A5B008A1F29 /* CTViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTViewCell.swift; sourceTree = "<group>"; };
+		D4A4F57F1BF45DC300F70EE2 /* OtherSleepDataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherSleepDataAPI.swift; sourceTree = "<group>"; };
 		D4B476201BCFB12E005A9BD0 /* SleepGameAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepGameAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B476671BD03F3C005A9BD0 /* StatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusController.swift; sourceTree = "<group>"; };
 		D4B4766B1BD06152005A9BD0 /* zukky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zukky.jpg; path = img/zukky.jpg; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				D43DEE1D1BC598E2009662DD /* UserAPI.swift */,
 				D43DEE271BC75323009662DD /* SleepAPI.swift */,
 				D460B81D1BEFB7EB00D81190 /* MySleepDataAPI.swift */,
+				D4A4F57F1BF45DC300F70EE2 /* OtherSleepDataAPI.swift */,
 			);
 			name = SleepGameAPI;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				D43DEE1E1BC598E2009662DD /* UserAPI.swift in Sources */,
 				D4B476781BD06536005A9BD0 /* ConfigViewController.swift in Sources */,
 				D43DEE281BC75323009662DD /* SleepAPI.swift in Sources */,
+				D4A4F5801BF45DC300F70EE2 /* OtherSleepDataAPI.swift in Sources */,
 				D4B476761BD064FC005A9BD0 /* AchievementViewController.swift in Sources */,
 				D49010FC1BD9891C008A1F29 /* CTModel.swift in Sources */,
 				D4B476681BD03F3C005A9BD0 /* StatusController.swift in Sources */,

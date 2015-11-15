@@ -10,14 +10,37 @@ import UIKit
 
 class RankingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
-    let imgArray: NSArray = ["zukky.jpg","zukky.jpg","zukky.jpg","zukky.jpg",
-        "zukky.jpg","zukky.jpg","zukky.jpg","zukky.jpg"]
+    var imgArray: [String] = []
     
-    let label2Array: NSArray = ["2013/8/23/16:04","2013/8/23/16:15","2013/8/23/16:47","2013/8/23/17:10",
-        "2013/8/23/1715:","2013/8/23/17:21","2013/8/23/17:33","2013/8/23/17:41"]
+    var sumpoint: [Int] = []
+    
+    var username: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let config = NSUserDefaults.standardUserDefaults()
+        let result : AnyObject! = config.objectForKey("UserID")
+        let str: String = (result as? String)!
+        print(str)
+        let url = SleepGameAPI.api + "getmydata.php?id=" + (result as? String)! + "&all=true"
+        let json = JSON(url: url)
+        print("json")
+        print(json)
+        print("jsonlength")
+        print(json.length)
+        print(json["0"]["0"]["username"])
+        
+        for(var i = 0;i < json.length;i++){
+            //print(value)
+            //username.append(String(json["0"]["0"]["username"])
+            //String(json["0"]["0"]["id"])
+            imgArray.append(String(json[String(i)]["0"]["imgurl"]))
+            sumpoint.append(Int(String(json[String(i)]["0"]["sumpoint"]))!)
+            
+            username.append(String(json[String(i)]["0"]["username"]))
+            
+        }
+        print(imgArray.count)
     }
     
     //Table Viewのセルの数を指定
@@ -31,18 +54,28 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = table.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        let img = UIImage(named:"\(imgArray[indexPath.row])")
-        // Tag番号 1 で UIImageView インスタンスの生成
-        let imageView = table.viewWithTag(1) as! UIImageView
-        imageView.image = img
+        let img_url = SleepGameAPI.img + imgArray[indexPath.row]
+        let url = NSURL(string: img_url)
+        let imgData: NSData
+        do {
+            imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
+            let img = UIImage(data:imgData);
+            //let img = UIImage(named:"\(imgArray[indexPath.row])")
+            // Tag番号 1 で UIImageView インスタンスの生成
+            let imageView = table.viewWithTag(1) as! UIImageView
+            imageView.image = img
+        } catch {
+            print("Error: can't create image.")
+            
+        }
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = table.viewWithTag(2) as! UILabel
-        label1.text = "zukky"//"\(indexPath.row + 1)位"
+        label1.text = "\(username[indexPath.row])"//\(indexPath.row + 1)位"
         
         // Tag番号 ３ で UILabel インスタンスの生成
         let label2 = table.viewWithTag(3) as! UILabel
-        label2.text = "300pt"//\(label2Array[indexPath.row])"
+        label2.text = "\(sumpoint[indexPath.row])pt"
         
         // Tag番号 ４ で UILabel インスタンスの生成
         let label3 = table.viewWithTag(4) as! UILabel

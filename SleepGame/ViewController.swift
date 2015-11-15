@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let config = NSUserDefaults.standardUserDefaults()
+        //let config = NSUserDefaults.standardUserDefaults()
         // 設定値の取得
         let result : AnyObject! = config.objectForKey("UserID")
         let result2 : AnyObject! = config.objectForKey("UserPASS")

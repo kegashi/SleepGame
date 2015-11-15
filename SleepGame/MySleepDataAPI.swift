@@ -13,17 +13,17 @@ public class MySleepDataAPI {
     public struct MySleepData {
         public var id: String? //ID
         public var bedtime: String? //就寝時間
-        public var duration: Int? //起床時間
+        public var duration: Int? //睡眠時間
         public var point: Int? //得点
     }
-    /*
-    public func getMysleepData(id: String, wakeuptime: String, point:Int) -> MySleepData{
+    
+    public func getMysleepData(id: String, bedtime: String, duration: Int, point:Int) -> MySleepData{
         var mysleepdata = MySleepData()
-        ///mysleepdata.id = id
-        //mysleepdata.bedtime = bedtime
-        //mysleepdata.wakeuptime = wakeuptime
-        //mysleepdata.point = point
+        mysleepdata.id = id
+        mysleepdata.bedtime = bedtime
+        mysleepdata.duration = duration
+        mysleepdata.point = point
         return mysleepdata
     }
-    */
+    
 }
