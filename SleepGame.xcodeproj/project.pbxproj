@@ -35,6 +35,19 @@
 		D4B476781BD06536005A9BD0 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476771BD06536005A9BD0 /* ConfigViewController.swift */; };
 		D4B4767E1BD56806005A9BD0 /* MyPageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */; };
 		D4B476811BD579FD005A9BD0 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B476801BD579FD005A9BD0 /* json.swift */; };
+		D4DD28E01BF97183001D13C7 /* boro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28DB1BF97183001D13C7 /* boro.jpg */; };
+		D4DD28E11BF97183001D13C7 /* eigen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28DC1BF97183001D13C7 /* eigen.jpg */; };
+		D4DD28E21BF97183001D13C7 /* fabius.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28DD1BF97183001D13C7 /* fabius.jpg */; };
+		D4DD28E31BF97183001D13C7 /* isokichi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28DE1BF97183001D13C7 /* isokichi.jpg */; };
+		D4DD28E41BF97183001D13C7 /* karu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28DF1BF97183001D13C7 /* karu.jpg */; };
+		D4DD28E91BF9718C001D13C7 /* mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28E51BF9718C001D13C7 /* mario.jpg */; };
+		D4DD28EA1BF9718C001D13C7 /* nemui.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28E61BF9718C001D13C7 /* nemui.jpg */; };
+		D4DD28EB1BF9718C001D13C7 /* river.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28E71BF9718C001D13C7 /* river.jpg */; };
+		D4DD28EC1BF9718C001D13C7 /* shinsan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28E81BF9718C001D13C7 /* shinsan.jpg */; };
+		D4DD28EF1BF97198001D13C7 /* wataru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28ED1BF97198001D13C7 /* wataru.jpg */; };
+		D4DD28F01BF97198001D13C7 /* ysk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28EE1BF97198001D13C7 /* ysk.jpg */; };
+		D4DD28F21BF971A0001D13C7 /* takamasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28F11BF971A0001D13C7 /* takamasa.jpg */; };
+		D4FC573B1BF966530084FD64 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC573A1BF966530084FD64 /* BattleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +123,19 @@
 		D4B476771BD06536005A9BD0 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageDetailViewController.swift; sourceTree = "<group>"; };
 		D4B476801BD579FD005A9BD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		D4DD28DB1BF97183001D13C7 /* boro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = boro.jpg; path = img/boro.jpg; sourceTree = "<group>"; };
+		D4DD28DC1BF97183001D13C7 /* eigen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = eigen.jpg; path = img/eigen.jpg; sourceTree = "<group>"; };
+		D4DD28DD1BF97183001D13C7 /* fabius.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fabius.jpg; path = img/fabius.jpg; sourceTree = "<group>"; };
+		D4DD28DE1BF97183001D13C7 /* isokichi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = isokichi.jpg; path = img/isokichi.jpg; sourceTree = "<group>"; };
+		D4DD28DF1BF97183001D13C7 /* karu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = karu.jpg; path = img/karu.jpg; sourceTree = "<group>"; };
+		D4DD28E51BF9718C001D13C7 /* mario.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mario.jpg; path = img/mario.jpg; sourceTree = "<group>"; };
+		D4DD28E61BF9718C001D13C7 /* nemui.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nemui.jpg; path = img/nemui.jpg; sourceTree = "<group>"; };
+		D4DD28E71BF9718C001D13C7 /* river.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = river.jpg; path = img/river.jpg; sourceTree = "<group>"; };
+		D4DD28E81BF9718C001D13C7 /* shinsan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = shinsan.jpg; path = img/shinsan.jpg; sourceTree = "<group>"; };
+		D4DD28ED1BF97198001D13C7 /* wataru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wataru.jpg; path = img/wataru.jpg; sourceTree = "<group>"; };
+		D4DD28EE1BF97198001D13C7 /* ysk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ysk.jpg; path = img/ysk.jpg; sourceTree = "<group>"; };
+		D4DD28F11BF971A0001D13C7 /* takamasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = takamasa.jpg; path = img/takamasa.jpg; sourceTree = "<group>"; };
+		D4FC573A1BF966530084FD64 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +242,18 @@
 		D43DEE1F1BC631FC009662DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D4DD28F11BF971A0001D13C7 /* takamasa.jpg */,
+				D4DD28ED1BF97198001D13C7 /* wataru.jpg */,
+				D4DD28EE1BF97198001D13C7 /* ysk.jpg */,
+				D4DD28E51BF9718C001D13C7 /* mario.jpg */,
+				D4DD28E61BF9718C001D13C7 /* nemui.jpg */,
+				D4DD28E71BF9718C001D13C7 /* river.jpg */,
+				D4DD28E81BF9718C001D13C7 /* shinsan.jpg */,
+				D4DD28DB1BF97183001D13C7 /* boro.jpg */,
+				D4DD28DC1BF97183001D13C7 /* eigen.jpg */,
+				D4DD28DD1BF97183001D13C7 /* fabius.jpg */,
+				D4DD28DE1BF97183001D13C7 /* isokichi.jpg */,
+				D4DD28DF1BF97183001D13C7 /* karu.jpg */,
 				D49010F61BD975A0008A1F29 /* tri1.png */,
 				D49010F71BD975A0008A1F29 /* tri2.png */,
 				D44A98D81BE6E1010066840E /* king.png */,
@@ -237,6 +275,7 @@
 				D4B476751BD064FC005A9BD0 /* AchievementViewController.swift */,
 				D4B476771BD06536005A9BD0 /* ConfigViewController.swift */,
 				D4B4767D1BD56806005A9BD0 /* MyPageDetailViewController.swift */,
+				D4FC573A1BF966530084FD64 /* BattleViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -392,15 +431,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DD28E41BF97183001D13C7 /* karu.jpg in Resources */,
 				D4B476701BD06164005A9BD0 /* sleeplog.jpg in Resources */,
+				D4DD28E01BF97183001D13C7 /* boro.jpg in Resources */,
 				D49010F81BD975A0008A1F29 /* tri1.png in Resources */,
+				D4DD28EC1BF9718C001D13C7 /* shinsan.jpg in Resources */,
+				D4DD28F01BF97198001D13C7 /* ysk.jpg in Resources */,
+				D4DD28E31BF97183001D13C7 /* isokichi.jpg in Resources */,
+				D4DD28EF1BF97198001D13C7 /* wataru.jpg in Resources */,
 				D44A98D91BE6E1010066840E /* king.png in Resources */,
+				D4DD28EA1BF9718C001D13C7 /* nemui.jpg in Resources */,
+				D4DD28F21BF971A0001D13C7 /* takamasa.jpg in Resources */,
 				D43DEDF71BC594CF009662DD /* LaunchScreen.storyboard in Resources */,
 				D4B4766F1BD06164005A9BD0 /* suya.jpg in Resources */,
 				D49010F91BD975A0008A1F29 /* tri2.png in Resources */,
+				D4DD28EB1BF9718C001D13C7 /* river.jpg in Resources */,
 				D43DEDF41BC594CF009662DD /* Assets.xcassets in Resources */,
 				D4B4766C1BD06152005A9BD0 /* zukky.jpg in Resources */,
+				D4DD28E11BF97183001D13C7 /* eigen.jpg in Resources */,
+				D4DD28E91BF9718C001D13C7 /* mario.jpg in Resources */,
 				D43DEDF21BC594CF009662DD /* Main.storyboard in Resources */,
+				D4DD28E21BF97183001D13C7 /* fabius.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +489,7 @@
 				D4B476781BD06536005A9BD0 /* ConfigViewController.swift in Sources */,
 				D43DEE281BC75323009662DD /* SleepAPI.swift in Sources */,
 				D4A4F5801BF45DC300F70EE2 /* OtherSleepDataAPI.swift in Sources */,
+				D4FC573B1BF966530084FD64 /* BattleViewController.swift in Sources */,
 				D4B476761BD064FC005A9BD0 /* AchievementViewController.swift in Sources */,
 				D49010FC1BD9891C008A1F29 /* CTModel.swift in Sources */,
 				D4B476681BD03F3C005A9BD0 /* StatusController.swift in Sources */,

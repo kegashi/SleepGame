@@ -35,7 +35,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
             //username.append(String(json["0"]["0"]["username"])
             //String(json["0"]["0"]["id"])
             imgArray.append(String(json[String(i)]["0"]["imgurl"]))
-            sumpoint.append(Int(String(json[String(i)]["0"]["sumpoint"]))!)
+            sumpoint.append(Int(String(json[String(i)]["0"]["pointweek"]))!)
             
             username.append(String(json[String(i)]["0"]["username"]))
             

@@ -57,17 +57,41 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = table.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
+        //睡眠開始時刻
         let bedtime = arrayBed[indexPath.row]
         print("bedtime=\(bedtime)")
+        
+        //睡眠時間
         let duration = arrayDuration[indexPath.row]
-        print("duration= \(duration)")
+        print("duration= \(duration)m")
+        print("hours= \(duration/60)h")
+        print("minutes= \(duration%60)m")
+        
+        //起床時刻
         //let waketime = Int(wakeuptime)! + Int(duration)!
+        let date = NSDate()
+        let formatter: NSDateFormatter = NSDateFormatter()
+        formatter.timeZone = NSTimeZone(name: "GMT")
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        print("wake1=\(formatter.stringFromDate(date))")
+        let bedtime2:NSDate = formatter.dateFromString(bedtime)!
+        print("wake2=\(formatter.dateFromString(bedtime)!)")
+        let dateUnix: NSTimeInterval? = bedtime2.timeIntervalSince1970
+        print("wake3=\(dateUnix)")
+        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+        //let bedtime3 = calendar.dateByAddingUnit(.MinuteCalendarUnit, value: 15, ofDate: bedtime2, options: nil)!
+        //曜日
         let day = arrayDay[indexPath.row]
-        print("day=\(day)")
+        let formatter_day: NSDateFormatter = NSDateFormatter()
+        print("day=(\(formatter_day.shortWeekdaySymbols[day]))")
+        
+        //ポイント
         let point = arrayPoint[indexPath.row]
         print("point=\(point)")
+        
+        
         let label0 = table.viewWithTag(1) as! UILabel
-        label0.text = "\(bedtime)"//"11月2日(月)"
+        label0.text = "\(bedtime)"//"11月2日(Mon)"
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = table.viewWithTag(2) as! UILabel

@@ -397,12 +397,135 @@
                         <segue destination="Uye-gX-4Kr" kind="relationship" relationship="viewControllers" id="B83-vW-4zK"/>
                         <segue destination="Rmf-EB-7B4" kind="relationship" relationship="viewControllers" id="npJ-Ij-SJa"/>
                         <segue destination="HHC-94-ThK" kind="relationship" relationship="viewControllers" id="Eit-Ei-tzp"/>
-                        <segue destination="uKM-BG-efT" kind="relationship" relationship="viewControllers" id="hwN-P8-2Hq"/>
+                        <segue destination="G0N-93-Qub" kind="relationship" relationship="viewControllers" id="7Cd-fh-mjH"/>
+                        <segue destination="uKM-BG-efT" kind="relationship" relationship="viewControllers" id="Uc2-YZ-vgf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygP-f4-FyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660.5" y="1295.5"/>
+            <point key="canvasLocation" x="-650.5" y="1251.5"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="55D-ds-Koi">
+            <objects>
+                <viewController id="G0N-93-Qub" userLabel="Battle View Controller" customClass="BattleViewController" customModule="SleepGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWh-l8-NEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Rt-BS-k7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R2m-IB-DBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1S4-Af-t2i">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <connections>
+                                    <segue destination="CWE-NJ-Cea" kind="embed" id="Zbt-ZM-aAZ"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム戦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QH-7b-DtZ">
+                                <rect key="frame" x="107" y="156" width="160" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11/15 - 11/21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFp-bs-DVv">
+                                <rect key="frame" x="141" y="201" width="93" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="きのこチーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-NV-REd">
+                                <rect key="frame" x="20" y="223" width="126" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA1" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ynu-Tp-aA3">
+                                <rect key="frame" x="20" y="254" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA2" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bg-lmt">
+                                <rect key="frame" x="107" y="254" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA5" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pzc-e4-fsI">
+                                <rect key="frame" x="20" y="330" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA6" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Uj3-wu-1lJ">
+                                <rect key="frame" x="107" y="330" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB5" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zfQ-Yp-4aA">
+                                <rect key="frame" x="20" y="550" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA3" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vZ0-f6-7jG">
+                                <rect key="frame" x="200" y="254" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userA4" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="46r-Kp-38Y">
+                                <rect key="frame" x="295" y="254" width="60" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg4-Nm-cxT">
+                                <rect key="frame" x="165" y="413" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.0" blue="0.0099332667309730612" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="sumA" text="9999pt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-aE-aq7">
+                                <rect key="frame" x="238" y="223" width="117" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="たけのこチーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbI-ds-1po">
+                                <rect key="frame" x="20" y="442" width="147" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB1" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-Nn-U0b">
+                                <rect key="frame" x="20" y="473" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB2" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-x6-jmX">
+                                <rect key="frame" x="107" y="473" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB3" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nja-OG-d0K">
+                                <rect key="frame" x="200" y="473" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB4" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wlx-i2-5R1">
+                                <rect key="frame" x="295" y="473" width="60" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="sumB" text="9999pt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVP-Ud-M67">
+                                <rect key="frame" x="238" y="442" width="117" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="userB6" image="zukky.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-WR-8jg">
+                                <rect key="frame" x="107" y="550" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="チーム戦" id="zGP-Jn-3Vl"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="sumA" destination="QH1-aE-aq7" id="wEy-iN-QIy"/>
+                        <outlet property="sumB" destination="uVP-Ud-M67" id="ji6-dl-I7a"/>
+                        <outlet property="userA1" destination="Ynu-Tp-aA3" id="Jtw-jI-iF3"/>
+                        <outlet property="userA2" destination="vZ0-f6-7jG" id="SSe-Yb-Cb9"/>
+                        <outlet property="userA3" destination="vZ0-f6-7jG" id="5Gu-u9-vS3"/>
+                        <outlet property="userA4" destination="46r-Kp-38Y" id="kIn-EZ-mnf"/>
+                        <outlet property="userA5" destination="pzc-e4-fsI" id="A3j-qu-TSi"/>
+                        <outlet property="userA6" destination="Uj3-wu-1lJ" id="poM-yx-sf8"/>
+                        <outlet property="userB1" destination="Lqh-Nn-U0b" id="PDO-TB-fwc"/>
+                        <outlet property="userB2" destination="4iD-x6-jmX" id="g9K-Za-PI2"/>
+                        <outlet property="userB3" destination="nja-OG-d0K" id="pNv-WL-VfR"/>
+                        <outlet property="userB4" destination="Wlx-i2-5R1" id="I8k-xV-Hcg"/>
+                        <outlet property="userB5" destination="zfQ-Yp-4aA" id="oAr-lN-Sdb"/>
+                        <outlet property="userB6" destination="9Tx-WR-8jg" id="x4u-7O-nBG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5W-tr-t3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-595.5" y="2267.5"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="6ZT-bH-WNQ">
@@ -446,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghg-vZ-nwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111.5" y="2718.5"/>
+            <point key="canvasLocation" x="-81.5" y="2788.5"/>
         </scene>
         <!--ランキング-->
         <scene sceneID="lQt-1r-qyV">
@@ -472,8 +595,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/15 - 11/21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snC-tS-TMv">
+                                <rect key="frame" x="141.5" y="186.5" width="93" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9bD-Qz-gPs">
-                                <rect key="frame" x="20" y="199" width="335" height="411"/>
+                                <rect key="frame" x="20" y="207" width="335" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="78" id="rTc-BL-fBE" userLabel="Cell">
@@ -517,7 +646,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RUb-5S-VFR" firstAttribute="centerY" secondItem="79i-de-3b8" secondAttribute="centerY" constant="-170" id="0wN-gs-51I"/>
+                            <constraint firstItem="snC-tS-TMv" firstAttribute="centerY" secondItem="79i-de-3b8" secondAttribute="centerY" constant="-137" id="BdZ-kW-9h3"/>
                             <constraint firstItem="RUb-5S-VFR" firstAttribute="centerX" secondItem="79i-de-3b8" secondAttribute="centerX" id="DEw-me-S3u"/>
+                            <constraint firstItem="snC-tS-TMv" firstAttribute="centerX" secondItem="79i-de-3b8" secondAttribute="centerX" id="n3u-QV-PWU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ランキング" id="jX2-jm-VZ9"/>
@@ -528,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di1-cE-K9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111.5" y="2008.5"/>
+            <point key="canvasLocation" x="-111.5" y="1999.5"/>
         </scene>
     </scenes>
     <resources>
@@ -536,6 +667,6 @@
         <image name="zukky.jpg" width="1216" height="1632"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fZa-An-PzL"/>
+        <segue reference="Zbt-ZM-aAZ"/>
     </inferredMetricsTieBreakers>
 </document>
