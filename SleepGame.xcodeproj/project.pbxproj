@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41C1CCD1C09AF4000F7DBD6 /* king_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = D41C1CCC1C09AF4000F7DBD6 /* king_blank.png */; };
 		D43DEDED1BC594CF009662DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEDEC1BC594CF009662DD /* AppDelegate.swift */; };
 		D43DEDEF1BC594CF009662DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEDEE1BC594CF009662DD /* ViewController.swift */; };
 		D43DEDF21BC594CF009662DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43DEDF01BC594CF009662DD /* Main.storyboard */; };
@@ -19,6 +20,11 @@
 		D43DEE241BC6333C009662DD /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEE231BC6333C009662DD /* MainTabViewController.swift */; };
 		D43DEE281BC75323009662DD /* SleepAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEE271BC75323009662DD /* SleepAPI.swift */; };
 		D44A98D91BE6E1010066840E /* king.png in Resources */ = {isa = PBXBuildFile; fileRef = D44A98D81BE6E1010066840E /* king.png */; };
+		D451F83E1BFCF96800B37975 /* comment.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D451F83D1BFCF96800B37975 /* comment.jpg */; };
+		D451F8401BFCF97A00B37975 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D451F83F1BFCF97A00B37975 /* bed.png */; };
+		D451F8421BFD047500B37975 /* frame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D451F8411BFD047500B37975 /* frame.jpg */; };
+		D451F8441BFD05B400B37975 /* frame1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D451F8431BFD05B400B37975 /* frame1.jpg */; };
+		D451F84A1BFD9C5300B37975 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451F8491BFD9C5300B37975 /* TimeUtil.swift */; };
 		D460B81E1BEFB7EB00D81190 /* MySleepDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D460B81D1BEFB7EB00D81190 /* MySleepDataAPI.swift */; };
 		D49010F81BD975A0008A1F29 /* tri1.png in Resources */ = {isa = PBXBuildFile; fileRef = D49010F61BD975A0008A1F29 /* tri1.png */; };
 		D49010F91BD975A0008A1F29 /* tri2.png in Resources */ = {isa = PBXBuildFile; fileRef = D49010F71BD975A0008A1F29 /* tri2.png */; };
@@ -47,6 +53,7 @@
 		D4DD28EF1BF97198001D13C7 /* wataru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28ED1BF97198001D13C7 /* wataru.jpg */; };
 		D4DD28F01BF97198001D13C7 /* ysk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28EE1BF97198001D13C7 /* ysk.jpg */; };
 		D4DD28F21BF971A0001D13C7 /* takamasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4DD28F11BF971A0001D13C7 /* takamasa.jpg */; };
+		D4EAEC661C07BF91004CC9A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EAEC651C07BF91004CC9A4 /* Icon.png */; };
 		D4FC573B1BF966530084FD64 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC573A1BF966530084FD64 /* BattleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D41C1CCC1C09AF4000F7DBD6 /* king_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = king_blank.png; path = img/king_blank.png; sourceTree = "<group>"; };
 		D43DEDE91BC594CF009662DD /* SleepGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43DEDEC1BC594CF009662DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43DEDEE1BC594CF009662DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,11 @@
 		D43DEE231BC6333C009662DD /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		D43DEE271BC75323009662DD /* SleepAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAPI.swift; sourceTree = "<group>"; };
 		D44A98D81BE6E1010066840E /* king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = king.png; path = img/king.png; sourceTree = "<group>"; };
+		D451F83D1BFCF96800B37975 /* comment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = comment.jpg; path = img/comment.jpg; sourceTree = "<group>"; };
+		D451F83F1BFCF97A00B37975 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bed.png; path = img/bed.png; sourceTree = "<group>"; };
+		D451F8411BFD047500B37975 /* frame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = frame.jpg; path = img/frame.jpg; sourceTree = "<group>"; };
+		D451F8431BFD05B400B37975 /* frame1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = frame1.jpg; path = img/frame1.jpg; sourceTree = "<group>"; };
+		D451F8491BFD9C5300B37975 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		D460B81D1BEFB7EB00D81190 /* MySleepDataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySleepDataAPI.swift; sourceTree = "<group>"; };
 		D49010F61BD975A0008A1F29 /* tri1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tri1.png; path = img/tri1.png; sourceTree = "<group>"; };
 		D49010F71BD975A0008A1F29 /* tri2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tri2.png; path = img/tri2.png; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 		D4DD28ED1BF97198001D13C7 /* wataru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wataru.jpg; path = img/wataru.jpg; sourceTree = "<group>"; };
 		D4DD28EE1BF97198001D13C7 /* ysk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ysk.jpg; path = img/ysk.jpg; sourceTree = "<group>"; };
 		D4DD28F11BF971A0001D13C7 /* takamasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = takamasa.jpg; path = img/takamasa.jpg; sourceTree = "<group>"; };
+		D4EAEC651C07BF91004CC9A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = img/Icon.png; sourceTree = "<group>"; };
 		D4FC573A1BF966530084FD64 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +256,12 @@
 		D43DEE1F1BC631FC009662DD /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D451F8411BFD047500B37975 /* frame.jpg */,
+				D451F8431BFD05B400B37975 /* frame1.jpg */,
+				D41C1CCC1C09AF4000F7DBD6 /* king_blank.png */,
+				D4EAEC651C07BF91004CC9A4 /* Icon.png */,
+				D451F83F1BFCF97A00B37975 /* bed.png */,
+				D451F83D1BFCF96800B37975 /* comment.jpg */,
 				D4DD28F11BF971A0001D13C7 /* takamasa.jpg */,
 				D4DD28ED1BF97198001D13C7 /* wataru.jpg */,
 				D4DD28EE1BF97198001D13C7 /* ysk.jpg */,
@@ -300,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B476801BD579FD005A9BD0 /* json.swift */,
+				D451F8491BFD9C5300B37975 /* TimeUtil.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -390,6 +411,7 @@
 				TargetAttributes = {
 					D43DEDE81BC594CF009662DD = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = RHNH48U726;
 					};
 					D43DEDFC1BC594CF009662DD = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -440,17 +462,23 @@
 				D4DD28E31BF97183001D13C7 /* isokichi.jpg in Resources */,
 				D4DD28EF1BF97198001D13C7 /* wataru.jpg in Resources */,
 				D44A98D91BE6E1010066840E /* king.png in Resources */,
+				D451F83E1BFCF96800B37975 /* comment.jpg in Resources */,
+				D451F8441BFD05B400B37975 /* frame1.jpg in Resources */,
 				D4DD28EA1BF9718C001D13C7 /* nemui.jpg in Resources */,
+				D451F8421BFD047500B37975 /* frame.jpg in Resources */,
 				D4DD28F21BF971A0001D13C7 /* takamasa.jpg in Resources */,
 				D43DEDF71BC594CF009662DD /* LaunchScreen.storyboard in Resources */,
 				D4B4766F1BD06164005A9BD0 /* suya.jpg in Resources */,
 				D49010F91BD975A0008A1F29 /* tri2.png in Resources */,
 				D4DD28EB1BF9718C001D13C7 /* river.jpg in Resources */,
+				D451F8401BFCF97A00B37975 /* bed.png in Resources */,
 				D43DEDF41BC594CF009662DD /* Assets.xcassets in Resources */,
+				D4EAEC661C07BF91004CC9A4 /* Icon.png in Resources */,
 				D4B4766C1BD06152005A9BD0 /* zukky.jpg in Resources */,
 				D4DD28E11BF97183001D13C7 /* eigen.jpg in Resources */,
 				D4DD28E91BF9718C001D13C7 /* mario.jpg in Resources */,
 				D43DEDF21BC594CF009662DD /* Main.storyboard in Resources */,
+				D41C1CCD1C09AF4000F7DBD6 /* king_blank.png in Resources */,
 				D4DD28E21BF97183001D13C7 /* fabius.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +516,7 @@
 				D43DEE1E1BC598E2009662DD /* UserAPI.swift in Sources */,
 				D4B476781BD06536005A9BD0 /* ConfigViewController.swift in Sources */,
 				D43DEE281BC75323009662DD /* SleepAPI.swift in Sources */,
+				D451F84A1BFD9C5300B37975 /* TimeUtil.swift in Sources */,
 				D4A4F5801BF45DC300F70EE2 /* OtherSleepDataAPI.swift in Sources */,
 				D4FC573B1BF966530084FD64 /* BattleViewController.swift in Sources */,
 				D4B476761BD064FC005A9BD0 /* AchievementViewController.swift in Sources */,
@@ -652,10 +681,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SleepGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ht.SleepGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -663,10 +695,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SleepGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ht.SleepGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

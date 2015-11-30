@@ -69,17 +69,20 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         
         //起床時刻
         //let waketime = Int(wakeuptime)! + Int(duration)!
-        let date = NSDate()
+        //let date = NSDate()
         let formatter: NSDateFormatter = NSDateFormatter()
-        formatter.timeZone = NSTimeZone(name: "GMT")
+        //formatter.timeZone = NSTimeZone(name: "GMT")
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        print("wake1=\(formatter.stringFromDate(date))")
+        //print("wake1=\(formatter.stringFromDate(date))")
         let bedtime2:NSDate = formatter.dateFromString(bedtime)!
-        print("wake2=\(formatter.dateFromString(bedtime)!)")
-        let dateUnix: NSTimeInterval? = bedtime2.timeIntervalSince1970
-        print("wake3=\(dateUnix)")
-        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
-        //let bedtime3 = calendar.dateByAddingUnit(.MinuteCalendarUnit, value: 15, ofDate: bedtime2, options: nil)!
+        print("就寝時間=\(formatter.dateFromString(bedtime)!)") //就寝時間get!
+        print("bedtime2.day=\(bedtime2.day)")
+        
+        var dateUnix: NSTimeInterval? = bedtime2.timeIntervalSince1970
+        dateUnix = dateUnix! + NSTimeInterval(duration*60)
+        let waketime = NSDate(timeIntervalSince1970: dateUnix!)
+        print("起床時刻=\(waketime)") //起床時間ゲット！
+        
         //曜日
         let day = arrayDay[indexPath.row]
         let formatter_day: NSDateFormatter = NSDateFormatter()
@@ -88,25 +91,31 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         //ポイント
         let point = arrayPoint[indexPath.row]
         print("point=\(point)")
-        
-        
+
         let label0 = table.viewWithTag(1) as! UILabel
-        label0.text = "\(bedtime)"//"11月2日(Mon)"
+        label0.text = "\(waketime.month)月\(waketime.day)日(\(formatter_day.shortWeekdaySymbols[day]))"//"11月2日(Mon)"
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = table.viewWithTag(2) as! UILabel
-        label1.text = "7:12"//"\(indexPath.row + 1)位"
+        label1.text = "\(duration/60):\(duration%60)"//"\(indexPath.row + 1)位"
         
         // Tag番号 ３ で UILabel インスタンスの生成
         let label2 = table.viewWithTag(3) as! UILabel
-        label2.text = "0:54"//\(label2Array[indexPath.row])"
-        
+        label2.text = "\(bedtime2.hour):\(bedtime2.minute)"
         // Tag番号 ４ で UILabel インスタンスの生成
         let label3 = table.viewWithTag(4) as! UILabel
-        label3.text = "8:28"//String(duration)
+        label3.text = "\(waketime.hour):\(waketime.minute)"//String(duration)
         
         let label4 = table.viewWithTag(5) as! UILabel
         label4.text = "\(point)" + "点"
+        
+        // Tag番号 6 で UIImageView インスタンスの生成
+        var img = UIImage(named:"king_blank.png")
+        let imageView = table.viewWithTag(6) as! UIImageView
+        if(point >= 80){
+            img = UIImage(named:"king.png")
+        }
+        imageView.image = img
         
         return cell
     }

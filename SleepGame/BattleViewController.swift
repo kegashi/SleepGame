@@ -36,7 +36,9 @@ class BattleViewController: UIViewController {
         let urlA = SleepGameAPI.api + "getmydata.php?id=" + (result as? String)! + "&all=dataA"
         let urlB = SleepGameAPI.api + "getmydata.php?id=" + (result as? String)! + "&all=dataB"
         let jsonA = JSON(url: urlA)
+        print(jsonA.length)
         let jsonB = JSON(url: urlB)
+        print(jsonB.length)
         var sumA = 0
         var sumB = 0
         for(var i = 0;i < jsonA.length;i++){
@@ -54,23 +56,24 @@ class BattleViewController: UIViewController {
             sumB+=(Int(String(jsonB[String(i)]["0"]["pointweek"]))!)
         }
         self.sumB.text = "\(sumB)pt"
+        print(imgUrls)
         imgOutput()
 
     }
     
     func imgOutput(){
-        userA1.image = UIImage(data:imgUrls[0].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userA2.image = UIImage(data:imgUrls[1].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userA3.image = UIImage(data:imgUrls[2].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userA4.image = UIImage(data:imgUrls[3].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userA5.image = UIImage(data:imgUrls[4].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userA6.image = UIImage(data:imgUrls[5].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB1.image = UIImage(data:imgUrls[6].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB2.image = UIImage(data:imgUrls[7].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB3.image = UIImage(data:imgUrls[8].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB4.image = UIImage(data:imgUrls[9].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB5.image = UIImage(data:imgUrls[10].dataUsingEncoding(NSUTF8StringEncoding)!)
-        userB6.image = UIImage(data:imgUrls[11].dataUsingEncoding(NSUTF8StringEncoding)!)
+        userA1.image = UIImage(named:imgUrls[0])
+        userA2.image = UIImage(named:imgUrls[1])
+        userA3.image = UIImage(named:imgUrls[2])
+        userA4.image = UIImage(named:imgUrls[3])
+        userA5.image = UIImage(named:imgUrls[4])
+        userA6.image = UIImage(named:imgUrls[5])
+        userB1.image = UIImage(named:imgUrls[6])
+        userB2.image = UIImage(named:imgUrls[7])
+        userB3.image = UIImage(named:imgUrls[8])
+        userB4.image = UIImage(named:imgUrls[9])
+        userB5.image = UIImage(named:imgUrls[10])
+        userB6.image = UIImage(named:imgUrls[11])
         /*
         var url = NSURL(string: img_url)
         var imgData: NSData
