@@ -13,8 +13,9 @@ class StatusController: UIViewController {
     @IBOutlet weak var UserImg: UIImageView!
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var UserBar: UIProgressView!
+    
     @IBOutlet weak var UserRank: UILabel!
-    @IBOutlet weak var UserDays: UILabel!
+    //@IBOutlet weak var UserDays: UILabel!
     @IBOutlet weak var UserExp: UILabel!
     
     var user = UserAPI.User()
@@ -41,7 +42,7 @@ class StatusController: UIViewController {
         UserBar.progress = 1 - (Float(user.next!) / 80)
         UserExp.text = "次レベルまで:" + String(user.next!) + "pt"
         UserRank.text = "レベル" + String(user.rank!)
-        UserDays.text = "25" + "日目"
+        //UserDays.text = "25" + "日目"
         
     }
     

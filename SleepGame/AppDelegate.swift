@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //DeployGateSDK.sharedInstance().launchApplicationWithAuthor("kegashi", key: "3f5be757a255ff3b68145c2e41143ea881741ff5", userInfomationEnabled: true)
         return true
     }
 

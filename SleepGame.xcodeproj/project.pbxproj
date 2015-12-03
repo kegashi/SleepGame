@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F7E154C07FDA1D13B55BAA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12413DF6FB96AC7A1A255025 /* libPods.a */; };
 		D41C1CCD1C09AF4000F7DBD6 /* king_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = D41C1CCC1C09AF4000F7DBD6 /* king_blank.png */; };
 		D43DEDED1BC594CF009662DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEDEC1BC594CF009662DD /* AppDelegate.swift */; };
 		D43DEDEF1BC594CF009662DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DEDEE1BC594CF009662DD /* ViewController.swift */; };
@@ -95,6 +96,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12413DF6FB96AC7A1A255025 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCFA3008F575F0D0D17C64A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AF163524081EE868B9D83B46 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D41C1CCC1C09AF4000F7DBD6 /* king_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = king_blank.png; path = img/king_blank.png; sourceTree = "<group>"; };
 		D43DEDE91BC594CF009662DD /* SleepGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43DEDEC1BC594CF009662DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		D49010FB1BD9891C008A1F29 /* CTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTModel.swift; sourceTree = "<group>"; };
 		D49010FD1BD98A5B008A1F29 /* CTViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTViewCell.swift; sourceTree = "<group>"; };
 		D4A4F57F1BF45DC300F70EE2 /* OtherSleepDataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherSleepDataAPI.swift; sourceTree = "<group>"; };
+		D4A982091C0F3FCD009A87B9 /* SleepGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SleepGame-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4B476201BCFB12E005A9BD0 /* SleepGameAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepGameAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B476671BD03F3C005A9BD0 /* StatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusController.swift; sourceTree = "<group>"; };
 		D4B4766B1BD06152005A9BD0 /* zukky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zukky.jpg; path = img/zukky.jpg; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F7E154C07FDA1D13B55BAA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +190,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		959FBB797372E6256FF0F069 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA3008F575F0D0D17C64A /* Pods.debug.xcconfig */,
+				AF163524081EE868B9D83B46 /* Pods.release.xcconfig */,
+				A33CF10A64C6FDA821EC1CA3 /* Frameworks */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A33CF10A64C6FDA821EC1CA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12413DF6FB96AC7A1A255025 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D43DEDE01BC594CF009662DD = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +215,7 @@
 				D43DEE001BC594CF009662DD /* SleepGameTests */,
 				D43DEE0B1BC594CF009662DD /* SleepGameUITests */,
 				D43DEDEA1BC594CF009662DD /* Products */,
+				959FBB797372E6256FF0F069 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +244,7 @@
 				D43DEDF51BC594CF009662DD /* LaunchScreen.storyboard */,
 				D43DEDF81BC594CF009662DD /* Info.plist */,
 				D43DEE1F1BC631FC009662DD /* Image */,
+				D4A982091C0F3FCD009A87B9 /* SleepGame-Bridging-Header.h */,
 			);
 			path = SleepGame;
 			sourceTree = "<group>";
@@ -332,10 +358,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D43DEE111BC594CF009662DD /* Build configuration list for PBXNativeTarget "SleepGame" */;
 			buildPhases = (
+				E9E194E6BF40D5F56BAC005D /* Check Pods Manifest.lock */,
 				D43DEDE51BC594CF009662DD /* Sources */,
 				D43DEDE61BC594CF009662DD /* Frameworks */,
 				D43DEDE71BC594CF009662DD /* Resources */,
 				D4B476311BCFB12E005A9BD0 /* Embed Frameworks */,
+				F1B301BB5094E6DB707A699E /* Embed Pods Frameworks */,
+				FF17C0F970C020A9170B3AFD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,6 +435,7 @@
 		D43DEDE11BC594CF009662DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Kazuki Egashira";
 				TargetAttributes = {
@@ -505,6 +535,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9E194E6BF40D5F56BAC005D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B301BB5094E6DB707A699E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF17C0F970C020A9170B3AFD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D43DEDE51BC594CF009662DD /* Sources */ = {
@@ -679,8 +757,10 @@
 		};
 		D43DEE121BC594CF009662DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CCFA3008F575F0D0D17C64A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SleepGame/Info.plist;
@@ -688,13 +768,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ht.SleepGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepGame/SleepGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D43DEE131BC594CF009662DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF163524081EE868B9D83B46 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SleepGame/Info.plist;
@@ -702,6 +786,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ht.SleepGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepGame/SleepGame-Bridging-Header.h";
 			};
 			name = Release;
 		};

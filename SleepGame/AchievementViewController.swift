@@ -97,14 +97,14 @@ class AchievementViewController: UIViewController, UITableViewDelegate, UITableV
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = table.viewWithTag(2) as! UILabel
-        label1.text = "\(duration/60):\(duration%60)"//"\(indexPath.row + 1)位"
+        label1.text = "\(duration/60):\(NSString(format: "%02d",duration%60))"//"\(indexPath.row + 1)位"
         
         // Tag番号 ３ で UILabel インスタンスの生成
         let label2 = table.viewWithTag(3) as! UILabel
-        label2.text = "\(bedtime2.hour):\(bedtime2.minute)"
+        label2.text = "\(bedtime2.hour):\(NSString(format: "%02d",bedtime2.minute))"
         // Tag番号 ４ で UILabel インスタンスの生成
         let label3 = table.viewWithTag(4) as! UILabel
-        label3.text = "\(waketime.hour):\(waketime.minute)"//String(duration)
+        label3.text = "\(waketime.hour):\(NSString(format: "%02d",waketime.minute))"//String(duration)
         
         let label4 = table.viewWithTag(5) as! UILabel
         label4.text = "\(point)" + "点"

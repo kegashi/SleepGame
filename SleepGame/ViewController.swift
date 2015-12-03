@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         if(json["login"].toString() == "true"){
             config.setObject(UserID.text ,forKey:"UserID")
             config.setObject(UserPASS.text ,forKey:"UserPASS")
+            config.setObject(NSDate(timeIntervalSince1970: 0) ,forKey:"LastRecord")
             config.synchronize()
             performSegueWithIdentifier("login", sender: self)
         }else{
