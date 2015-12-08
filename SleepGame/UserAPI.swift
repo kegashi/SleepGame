@@ -35,8 +35,8 @@ public class UserAPI {
         user.startdate = json["0"]["0"]["startdate"].toString()
         user.sumpoint = Int(json["0"]["0"]["sumpoint"].toString())
         user.picurl = json["0"]["0"]["imgurl"].toString()
-        user.rank = user.sumpoint! / 80 + 1
-        user.next = 80 - user.sumpoint! % 80
+        user.rank = user.sumpoint! / 40 + 1
+        user.next = 40 - user.sumpoint! % 40
         return user
     }
     

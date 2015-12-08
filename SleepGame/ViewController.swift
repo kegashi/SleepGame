@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var UserID: UITextField!
     @IBOutlet weak var UserPASS: UITextField!
     @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var register: UIButton!
+    
     var config = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -20,12 +22,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //let config = NSUserDefaults.standardUserDefaults()
         // 設定値の取得
+        
+        //デバッグ用
+        /*
+        config.removeObjectForKey("LastRecord")
+        config.removeObjectForKey("UserID")
+        config.removeObjectForKey("UserPASS")
+        */
+        
         let result : AnyObject! = config.objectForKey("UserID")
         let result2 : AnyObject! = config.objectForKey("UserPASS")
         UserID.text = result as? String
         UserPASS.text = result2 as? String
         UserPASS.secureTextEntry = true
         login.addTarget(self, action: "loginfunc:", forControlEvents: UIControlEvents.TouchDown)
+        register.addTarget(self, action: "registerfunc:", forControlEvents: UIControlEvents.TouchDown)
     }
     
     //画面表示直後に呼ばれる
@@ -64,6 +75,13 @@ class ViewController: UIViewController {
         print(json["login"].toString() == "true")
         if(json["login"].toString() == "true"){
             performSegueWithIdentifier("login", sender: self)
+        }
+    }
+    
+    func registerfunc(sender: AnyObject){
+        let url = NSURL(string: "https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=229RM7&redirect_uri=http%3A%2F%2F133.27.171.211%2FSleepGame%2Fapi%2Ffitbit%2Faccess.php&scope=activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight")
+        if UIApplication.sharedApplication().canOpenURL(url!){
+            UIApplication.sharedApplication().openURL(url!)
         }
     }
 

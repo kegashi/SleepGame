@@ -22,19 +22,21 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var UIrhythm: UILabel!
     @IBOutlet weak var UIscore: UILabel!
     @IBOutlet weak var UIcomment: UILabel!
-    @IBOutlet weak var UIreload: UIButton!
+    //@IBOutlet weak var UIreload: UIButton!
     
     let config = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UIreload.addTarget(self, action: "reloadfunc:", forControlEvents: UIControlEvents.TouchDown)
+        //UIreload.addTarget(self, action: "reloadfunc:", forControlEvents: UIControlEvents.TouchDown)
         let result : AnyObject! = config.objectForKey("UserID")
-        let lastrecord : AnyObject! = config.objectForKey("LastRecord")
+        var lastrecord : AnyObject! = config.objectForKey("LastRecord")
         
-        //デバッグ用
-        config.setObject(NSDate(timeIntervalSince1970: 0) ,forKey:"LastRecord")
+        if(lastrecord == nil){
+            config.setObject(NSDate(timeIntervalSince1970: 0) ,forKey:"LastRecord")
+            lastrecord = config.objectForKey("LastRecord")
+        }
         
         let str: String = (result as? String)!
         print(str)
@@ -45,6 +47,20 @@ class MyPageViewController: UIViewController {
         let url_user = SleepGameAPI.api + "getmydata.php?id=" + (result as? String)! + "&all=false"
         let json_user = JSON(url: url_user)
         print(json_user)
+        
+        
+        let formatter: NSDateFormatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let idealduration = Int(String(json_user[String(0)]["0"]["idealduration"]))!
+        let idealbedtime = String(json_user[String(0)]["0"]["idealbedtime"])
+        let idealbedtime2:NSDate = formatter.dateFromString(idealbedtime)!
+        var idealdateUnix: NSTimeInterval? = idealbedtime2.timeIntervalSince1970
+        idealdateUnix = idealdateUnix! + NSTimeInterval(idealduration*60)
+        let idealwaketime = NSDate(timeIntervalSince1970: idealdateUnix!)
+        UIidealduration.text = "\(idealduration/60)時間\(NSString(format: "%02d",idealduration%60))分"
+        UIidealbedtime.text = "\(idealbedtime2.hour):\(NSString(format: "%02d", idealbedtime2.minute))"
+        UIidealwaketime.text = "\(idealwaketime.hour):\(NSString(format: "%02d", idealwaketime.minute))"
         
         if(json[String(0)]["0"].length == 0){
         }else{
@@ -57,21 +73,11 @@ class MyPageViewController: UIViewController {
             let quantity = Int(String(json[String(0)]["0"]["quantity"]))!
             let quality = Int(String(json[String(0)]["0"]["quality"]))!
             let rhythmpoint = Int(String(json[String(0)]["0"]["rhythmpoint"]))!
-            let idealduration = Int(String(json_user[String(0)]["0"]["idealduration"]))!
-            let idealbedtime = String(json_user[String(0)]["0"]["idealbedtime"])
-            
-            let formatter: NSDateFormatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             
             let bedtime2:NSDate = formatter.dateFromString(bedtime)!
             var dateUnix: NSTimeInterval? = bedtime2.timeIntervalSince1970
             dateUnix = dateUnix! + NSTimeInterval(duration*60)
             let waketime = NSDate(timeIntervalSince1970: dateUnix!)
-            
-            let idealbedtime2:NSDate = formatter.dateFromString(idealbedtime)!
-            var idealdateUnix: NSTimeInterval? = idealbedtime2.timeIntervalSince1970
-            idealdateUnix = idealdateUnix! + NSTimeInterval(idealduration*60)
-            let idealwaketime = NSDate(timeIntervalSince1970: idealdateUnix!)
             
             //曜日
             let formatter_day: NSDateFormatter = NSDateFormatter()
@@ -82,16 +88,12 @@ class MyPageViewController: UIViewController {
             if(waketime.day != (lastrecord as? NSDate)!.day){
                 config.setObject(waketime ,forKey:"LastRecord")
                 question(point, quantity: quantity, quality: quality, rhythmpoint: rhythmpoint)
-            }
-            else{
-                viewScore(point, quantity: quantity, quality: quality, rhythmpoint: rhythmpoint)
+            }else{
+                    viewScore(point, quantity: quantity, quality: quality, rhythmpoint: rhythmpoint)
             }
             //値を入れる
             UIdate.text = "\(waketime.month)月\(waketime.day)日(\(day))"
             UIduration.text = "\(duration/60)時間\(NSString(format: "%02d", duration%60))分"
-            UIidealduration.text = "\(idealduration/60)時間\(NSString(format: "%02d",idealduration%60))分"
-            UIidealbedtime.text = "\(idealbedtime2.hour):\(NSString(format: "%02d", idealbedtime2.minute))"
-            UIidealwaketime.text = "\(idealwaketime.hour):\(NSString(format: "%02d", idealwaketime.minute))"
             UIbedtime.text = "\(bedtime2.hour):\(NSString(format: "%02d", bedtime2.minute))"
             UIwaketime.text = "\(waketime.hour):\(NSString(format: "%02d", waketime.minute))"
         }
@@ -166,9 +168,11 @@ class MyPageViewController: UIViewController {
         alert.show()
     }
     
+    /*
     func reloadfunc(sender: AnyObject){
         performSegueWithIdentifier("reload", sender: self)
     }
+    */
     
     @IBAction func unwindToMyPage(segue: UIStoryboardSegue) {
         
